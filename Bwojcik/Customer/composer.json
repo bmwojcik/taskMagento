@@ -1,0 +1,21 @@
+{
+  "name": "bwojcik/module-customer",
+  "version": "1.0.0",
+  "description": "This module is responsible for adding Hobby Customer Attribute",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "magento/module-customer": "103.0.*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Bwojcik\\Customer\\": ""
+    }
+  }
+}

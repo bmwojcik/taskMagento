@@ -1,0 +1,10 @@
+type Customer {
+  customer_hobby: String @doc(description: "Customer Hobby Attribute")
+    @resolver(
+      class: "\\Bwojcik\\Customer\\Model\\Resolver\\CustomerAttributes"
+    )
+}
+
+input CustomerInput {
+  customer_hobby: String @doc(description: "Customer Hobby Attribute Val")
+}

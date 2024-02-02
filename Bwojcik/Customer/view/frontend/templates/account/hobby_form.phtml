@@ -1,0 +1,38 @@
+<?php
+ /** @var Escaper $escaper */
+
+use Magento\Framework\Escaper;
+
+?>
+<div data-bind="scope: 'additionalCustomerAttributes'">
+<div class="customer-attributes-edit">
+    <form class="form customer-attributes-edit"
+          id="customer-hobby-form"
+          action="<?= $escaper->escapeUrl($block->getUrl('attributes/edit/update')) ?>"
+          method="post">
+        <fieldset class="fieldset">
+            <input name="form_key" type="hidden" value="<?php echo $block->getFormKey() ?>" />
+            <div class="field required">
+                <label class="label" for="customer-hobby" >
+                    <span><?= $escaper->escapeHtml(__('Hobby')) ?></span>
+                </label>
+                <div class="control">
+                    <select name="customer-attribute-hobby"
+                            class="select"
+                            id="customer-attribute-hobby"
+                                data-bind="
+                                    options: getHobbies(),
+                                    optionsValue: 'value',
+                                    optionsText: 'label',
+                                    value: getHobbyIndex()">
+                        </select>
+
+            </div>
+                <div class="actions">
+                    <button class="action primary"><?= /** @NoEscape */ __('Edit') ?></button>
+                </div>
+        </fieldset>
+    </form>
+</div>
+</div>
+

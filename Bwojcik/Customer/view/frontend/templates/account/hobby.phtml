@@ -1,0 +1,17 @@
+<div data-bind="scope: 'additionalCustomerAttributes'">
+    <span data-bind="text: getHobbyName()">
+    </span>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "additionalCustomerAttributes": {
+                        "component": "Bwojcik_Customer/js/hobby"
+                    }
+                }
+            }
+        }
+    }
+</script>
